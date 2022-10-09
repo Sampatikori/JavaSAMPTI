@@ -1,1 +1,1 @@
-# JavaSAMPATI
+# JavaSAMPTI

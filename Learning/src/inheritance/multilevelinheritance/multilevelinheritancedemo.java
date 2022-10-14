@@ -1,16 +1,14 @@
-package inheritance;
+package inheritance.multilevelinheritance;
 
 public class multilevelinheritancedemo {
 public static void main(String[] args) {
 	Animal animal=new Animal();
 	Cow cow=new Cow();
-	Calf calf = new Calf();
-	
+	Calf calf=new Calf();
+		
 	calf.wagging();
 	calf.producemilk();
 	calf.play();
-	
-	
 	
 }
 }

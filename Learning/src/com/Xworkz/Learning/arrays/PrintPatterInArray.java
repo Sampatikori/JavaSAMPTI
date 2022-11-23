@@ -11,7 +11,7 @@ public class PrintPatterInArray {
 		}}
 	for (int i = 0; i < a.length; i++) {
 		for (int j = 0; j < a[i].length; j++) {
-			if((i==j) || (i==0 & j==2) || (i==2 & j==0)){
+			if((i==j) || i+j==a.length-1){
 				System.out.print("* ");
 			}
 			else {

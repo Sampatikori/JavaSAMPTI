@@ -5,16 +5,23 @@ import java.util.Scanner;
 public class ReversalOfAString {
 	public static void main(String[] args) {
 		
-		System.out.println("Enter a string that has to be reversed");
+		System.out.println("Enter a name");
 		Scanner s1=new Scanner(System.in);
 	while(true) {
 			String s = s1.nextLine();
-		String rev=" ";
-		for(int i=s.length()-1; i>=0; i--) {
+		String name = s;
+		String rev="";
+		int length = s.length();
+		for(int i=length-1; i>=0; i--) {
 			rev=rev+s.charAt(i);	
 		}
-		System.out.println(rev);
+		if(s.equals(rev)) 
+			System.out.println(s+ " is palindrome");
+		
+		else 
+			System.out.println(s+ " is not palindrome");
 		
 	}
+	
 	}
-}
+	}

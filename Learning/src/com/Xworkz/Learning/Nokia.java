@@ -1,6 +1,6 @@
 package com.Xworkz.Learning;
 
-public abstract class Nokia extends Mobile{
+public abstract  class Nokia extends Mobile{
 
 	void Rightarrow() {
 		System.out.println("Right arrow by mobile");

@@ -1,3 +1,4 @@
+
 package com.Xworkz.Learning.aptitude_program.patternPrograms;
 
 public class Pattern1 {

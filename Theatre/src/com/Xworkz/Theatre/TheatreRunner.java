@@ -98,13 +98,13 @@ public class TheatreRunner {
 	service.save(mohini);
 	service.save(miraz);
 	
-	ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
+ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
 	theatrelist.add(bigcinemas);
-	theatrelist.add(esqare);
+    theatrelist.add(esqare);
 	theatrelist.add(pvr);
 	theatrelist.add(ciniplex);
 	theatrelist.add(sara);
-	theatrelist.add(vishnu);
+    theatrelist.add(vishnu);
 	theatrelist.add(mukta);
 	theatrelist.add(meenakshi);
 	theatrelist.add(shilpa);
@@ -115,8 +115,8 @@ public class TheatreRunner {
 	theatrelist.add(shalini);
 	theatrelist.add(mohini);
 	theatrelist.add(miraz);
-	
-	TheatreDTO td=service.read(vishnu);
-	System.out.println("details of vishnu theatre = "+td);
-	}   
+		
+	System.out.println("details of shetty theatre "+service.read(shetty));
+		
+}
 }

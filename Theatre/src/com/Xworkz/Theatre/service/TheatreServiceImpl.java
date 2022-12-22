@@ -9,30 +9,41 @@ import com.Xworkz.Theatre.repository.TheatreRepoImpl;
 
 public class TheatreServiceImpl implements TheatreService {
    TheatreRepo repo=new TheatreRepoImpl();
-   
-   List<TheatreDTO> list=new ArrayList<TheatreDTO>();
-
-   @Override
-   public TheatreDTO save(TheatreDTO dto) {
-	   if(dto!=null) {
-		   repo.save(dto);
-		   System.out.println("data passed to repo");
-		   list.add(dto);
-		   System.out.println("data added to database");
-		   
-	   }
-   	
-   	return dto;
-   }
 
 @Override
-public TheatreDTO read(TheatreDTO dto) {
-	ArrayList<TheatreDTO> td=repo.read(dto);
-	for (TheatreDTO theatreDTO : td) {
-		System.out.println(theatreDTO);
-	}
-		return dto;
+public boolean save(TheatreDTO dto) {
+	  if(dto!=null) {
+		  if(dto.getName().length()>=3) {
+			  System.out.println("data can be passed to repo");
+			  repo.save(dto);
+			  return true;
+		  }
+	  }
+	return false;
 }
+
+@Override
+public List<TheatreDTO> read() {
+	
+	return repo.read();
+}
+
+@Override
+public String findByName(String name) {
+	List<TheatreDTO> dt=repo.read();
+	if(dt!=null) {
+//		for (TheatreDTO theatreDTO : dt) {
+//		 return name;	
+		}
+		
+	
+	return name;
+}
+
+
+   
+
+  
 
 	}
 

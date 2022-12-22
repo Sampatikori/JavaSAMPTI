@@ -1,6 +1,7 @@
 package com.Xworkz.Theatre;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.Xworkz.Theatre.service.TheatreService;
 import com.Xworkz.Theatre.service.TheatreServiceImpl;
@@ -70,7 +71,8 @@ public class TheatreRunner {
 	shetty.setPrice(200);
 	shetty.setNoOfTicketsAvailable(200);
 	shetty.setShowTimings("3pm to 6pm");
-    
+	
+	ArrayList<TheatreDTO> td=new ArrayList<TheatreDTO>();
 	TheatreDTO sangam=new TheatreDTO("Sangam","kalburagi",200,10,true,4,200,200,"Brhamastra","12.30pm to 3.30pm");
 	TheatreDTO shilpa=new TheatreDTO("Shilpa","Belgaum",100,15,false,2,150,100,"Jaanu","6pm to 9pm");
 	TheatreDTO meenakshi=new TheatreDTO("Meenakshi","Gadag",200,10,true,4,200,200,"Badava Rascal","12.30pm to 3.30pm");
@@ -116,7 +118,33 @@ ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
 	theatrelist.add(mohini);
 	theatrelist.add(miraz);
 		
-	System.out.println("details of shetty theatre "+service.read(shetty));
+	System.out.println(service.save(bigcinemas));
+	
+	     List<TheatreDTO> read =service.read();
+	     for (TheatreDTO theatreDTO : read) {
+			System.out.println(theatreDTO);
+	
+	}
+	
+	 String dt=service.findByName("Shetty");  
+	for (TheatreDTO theatreDTO : read) {
+		if(theatreDTO.getName().equals(dt)) {
+			System.out.println(theatreDTO);
+		}
 		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 }

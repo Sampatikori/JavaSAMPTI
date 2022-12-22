@@ -3,22 +3,32 @@ package com.Xworkz.Theatre.repository;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.Xworkz.Theatre.TheatreDTO;
 
 public class TheatreRepoImpl implements TheatreRepo {
-    
+
+	ArrayList<TheatreDTO> list=new ArrayList<TheatreDTO>();
+
 	@Override
-	public TheatreDTO save(TheatreDTO dto) {
-		System.out.println("save method in repository");
-		return dto;
-				
-	}
-	@Override
-	public TheatreDTO read(TheatreDTO dto) {
-		System.out.println("read method in repository");
-		return dto;
-		
+	public boolean save(TheatreDTO dto) {
+		System.out.println("data is added to database");
+		list.add(dto);
+		return true;
 	}
 
+	@Override
+	public List<TheatreDTO> read() {
+		
+		return list;
+	}
+
+	@Override
+	public ArrayList<TheatreDTO> findByName(String name) {
+		
+		return list;
+	}
+	
+	
 }

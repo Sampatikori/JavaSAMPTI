@@ -1,9 +1,14 @@
 package com.Xworkz.Mall.Repository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.Xworkz.Mall.MallDTO;
 
 public interface MallRepo {
-     boolean save(MallDTO dto);
-     boolean read(MallDTO dto);
-     boolean findbyName(MallDTO dto);
+   public  boolean save(MallDTO dto);
+   public List<MallDTO> read();
+   public List<MallDTO> findByName(String name);
+
+
 }

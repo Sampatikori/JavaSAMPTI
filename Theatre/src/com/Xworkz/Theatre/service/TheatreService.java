@@ -1,10 +1,13 @@
 package com.Xworkz.Theatre.service;
 
+import java.util.List;
+
 import com.Xworkz.Theatre.TheatreDTO;
 
 public interface TheatreService {
-	TheatreDTO save(TheatreDTO dto);
-    TheatreDTO read(TheatreDTO dto);
+	public boolean save(TheatreDTO dto);
+    public List<TheatreDTO> read();
+    public String findByName(String name);
 }
 
 

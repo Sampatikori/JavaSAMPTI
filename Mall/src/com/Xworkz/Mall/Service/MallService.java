@@ -1,9 +1,11 @@
 package com.Xworkz.Mall.Service;
 
+import java.util.List;
+
 import com.Xworkz.Mall.MallDTO;
 
 public interface MallService {
-	 boolean save(MallDTO dto);
-     boolean read(MallDTO dto);
-     boolean findbyName(MallDTO dto);
+      public boolean save(MallDTO dto);
+      public List<MallDTO> read();
+      public String findByName(String name);
 }

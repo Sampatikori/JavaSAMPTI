@@ -29,23 +29,26 @@ public List<TheatreDTO> read() {
 }
 
 @Override
-public String findByName(String name) {
+public TheatreDTO findByName(String name) {
 	List<TheatreDTO> dt=repo.read();
 	if(dt!=null) {
-//		for (TheatreDTO theatreDTO : dt) {
-//		 return name;	
+	for (TheatreDTO theatreDTO : dt) 
+		if(theatreDTO.getName().equals(name)) {
+			System.out.println(theatreDTO);
 		}
-		
-	
-	return name;
-}
+	}
 
+	return null;
+	
+	
+}
+}
 
    
 
   
 
-	}
+	
 
 	
  

@@ -7,7 +7,7 @@ import com.Xworkz.Theatre.TheatreDTO;
 public interface TheatreService {
 	public boolean save(TheatreDTO dto);
     public List<TheatreDTO> read();
-    public String findByName(String name);
+    public TheatreDTO findByName(String name);
 }
 
 

@@ -7,5 +7,5 @@ import com.Xworkz.Mall.MallDTO;
 public interface MallService {
       public boolean save(MallDTO dto);
       public List<MallDTO> read();
-      public String findByName(String name);
+      public MallDTO findByName(String name);
 }

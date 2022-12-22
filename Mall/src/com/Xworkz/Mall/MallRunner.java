@@ -27,10 +27,12 @@ public class MallRunner {
 				 System.out.println(mallDTO);
 	
 	           }
-	             =service.findByName("Orian");    
+	            service.findByName("Asian");
+					
+				}
 			
 		}
-	}
+	
 	
 
 

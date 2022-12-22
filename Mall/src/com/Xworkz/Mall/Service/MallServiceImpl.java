@@ -29,14 +29,21 @@ public class MallServiceImpl implements MallService {
 	}
 
 	@Override
-	public String findByName(String name) {
-		ArrayList<MallDTO> list=repo.findByName(name){
+	public MallDTO findByName(String name) {
+		List<MallDTO> list=repo.findByName(name);
+		if(list!=null) {
+			for (MallDTO mallDTO : list) {
+				if(mallDTO.getName().equals(name))
+					System.out.println(mallDTO);
+				
+			}
 			
 		}
 		
-		return dto;
+	
+		return null;
 	}
 
 	
-}  
+}
 	

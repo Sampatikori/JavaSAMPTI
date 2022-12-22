@@ -126,25 +126,9 @@ ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
 	
 	}
 	
-	 String dt=service.findByName("Shetty");  
-	for (TheatreDTO theatreDTO : read) {
-		if(theatreDTO.getName().equals(dt)) {
-			System.out.println(theatreDTO);
-		}
+	service.findByName("Mohini");  
+	
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
 }

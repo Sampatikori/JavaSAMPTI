@@ -42,6 +42,16 @@ public TheatreDTO findByName(String name) {
 	
 	
 }
+
+//@Override
+//public TheatreDTO updateNameByIndex(String name, int index) {
+//	if(name!=null)
+//	return null;
+//}
+
+
+
+
 }
 
    

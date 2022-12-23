@@ -100,23 +100,23 @@ public class TheatreRunner {
 	service.save(mohini);
 	service.save(miraz);
 	
-ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
-	theatrelist.add(bigcinemas);
-    theatrelist.add(esqare);
-	theatrelist.add(pvr);
-	theatrelist.add(ciniplex);
-	theatrelist.add(sara);
-    theatrelist.add(vishnu);
-	theatrelist.add(mukta);
-	theatrelist.add(meenakshi);
-	theatrelist.add(shilpa);
-	theatrelist.add(sangam);
-	theatrelist.add(shetty);
-	
-	theatrelist.add(ionox);
-	theatrelist.add(shalini);
-	theatrelist.add(mohini);
-	theatrelist.add(miraz);
+//ArrayList<TheatreDTO> theatrelist=new ArrayList<TheatreDTO>();
+//	theatrelist.add(bigcinemas);
+//    theatrelist.add(esqare);
+//	theatrelist.add(pvr);
+//	theatrelist.add(ciniplex);
+//	theatrelist.add(sara);
+//    theatrelist.add(vishnu);
+//	theatrelist.add(mukta);
+//	theatrelist.add(meenakshi);
+//	theatrelist.add(shilpa);
+//	theatrelist.add(sangam);
+//	theatrelist.add(shetty);
+//	
+//	theatrelist.add(ionox);
+//	theatrelist.add(shalini);
+//	theatrelist.add(mohini);
+//	theatrelist.add(miraz);
 		
 	System.out.println(service.save(bigcinemas));
 	

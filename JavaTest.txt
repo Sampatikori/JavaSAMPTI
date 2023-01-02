@@ -1,0 +1,60 @@
+1. Abstraction is the process of hiding implementation and showing functionality. 
+     Whereas Encapsulation is the process of wrapping data and behavior as a single unit.  In encapsulation we use setters and getters.        
+2. IS-A relationship is a mechanism in which a child class aquires all the property and behavior of the parent class. Using a keyword “extends”. Whereas HAS-A relationship indicates 
+3.Java doesn’t support multiple inheritance through class  because it creates ambiguity. But it can be supported using interface.
+5.class NumberOfCharacters{
+    public static void main(String[] args){
+    String s=”Sam”;
+    int len=s.length();
+    int count=0;
+    for(int i=0; i<s.length; i++){
+    count++;
+     System.out.println(count);
+    }}}
+6.class ReverseOfString{
+public static void main(String[] args){
+String s=”SamKori”;
+int len=s.length();
+String rev=” “;
+for(int i=len-1; i>=0; i--){
+rev=rev+s.charAt(i);
+system.out.println(rev);
+
+7.equals() method checks the address of the two objects whereas equals(==) operator checks only for the similar values of the two objects.
+
+8.By using Final Keyword we can create constants in java.
+
+9.Private modifier: Provides Accessibility only within the class not from outside the class.
+Protected modifier: Provides Accessibility within the package and outside of the package only through IS-A relationship.
+Public modifier: Provides Accessibility from anywhere.
+
+10.Wrapper classes : Conversion of Primitives into Object.
+Ex: 
+    //Implicit                         //Explicit
+      int n=10;                          int n=10;
+      Integer num=n;              Integer n=new Integer(n);
+
+12.Heap memory: All Object level data is stored in heap memory.
+Stack memory: Local variables are stored in Stack memory.
+
+13.	
+class PalindromeOfString{
+public static void main(String[] args){
+String s=”SamKori”;
+int len=s.length();
+String rev=” “;
+for(int i=len-1; i>=0; i--){
+rev=rev+s.charAt(i);
+system.out.println(rev);
+}
+If(s.eqvals(rev)){
+ System.out.println(“given string is palindrome”);
+}
+Else{
+System.out.println(“given string is not palindrome”);
+}}}
+
+15.  If we use final keyword along with variables we cannot change the value of that variable. And if we use final keyword along with method we cannot override it and similarly if we use final keyword along with class we cannot extend that class.
+Difference between final and static keyword: 
+Final : keyword is used to restrict the user.
+Static: keyword is mainly used for memory management , we can call a static variable directly without creating the object.

@@ -39,8 +39,11 @@ public class GamesRunner {
 	for(GamesDTO gd:list) {
 		System.out.println(gd);
 	}
-	
-	
+	GamesDTO dt=service.updateNameByIndex("Marathon", 0);
+	for(GamesDTO gd:list) {
+		System.out.println(gd);
+		
+	}
 	
 		
 		

@@ -9,4 +9,5 @@ public interface GamesService {
  public List<GamesDTO> read();
  public GamesDTO findByName(String name);
  public GamesDTO deleteByIndex(int index);
+ public GamesDTO updateNameByIndex(String name, int index);
 }

@@ -34,6 +34,14 @@ public class GamesRepoImpl implements GamesRepo {
 		return true;
 	}
 
+	@Override
+	public List<GamesDTO> updateNameByIndex(String name, int index) {
+		GamesDTO gd=gameslist.get(index);
+		gd.setGameName(name);
+		gameslist.set(index, gd);
+		return gameslist;
+	}
+
 	
 	
 

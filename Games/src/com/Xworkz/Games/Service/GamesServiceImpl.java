@@ -50,4 +50,14 @@ public class GamesServiceImpl implements GamesService {
 		return null;
 	}
 
+	@Override
+	public GamesDTO updateNameByIndex(String name, int index) {
+		if(name!=null && index>=0) {
+			repo.updateNameByIndex(name, index);
+			System.out.println("data has been updated");
+			
+		}
+		return null;
+	}
+
 }

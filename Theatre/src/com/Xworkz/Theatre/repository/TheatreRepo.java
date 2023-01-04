@@ -9,6 +9,7 @@ public interface TheatreRepo {
 	public boolean save(TheatreDTO dto);
 	public List<TheatreDTO> read();
     public ArrayList<TheatreDTO> findByName(String name);
+    public boolean deleteByIndex(int index);
 }
 
 

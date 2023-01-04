@@ -13,8 +13,8 @@ public class TheatreRepoImpl implements TheatreRepo {
 
 	@Override
 	public boolean save(TheatreDTO dto) {
-		System.out.println("data is added to database");
 		list.add(dto);
+		System.out.println("data is added to database");
 		return true;
 	}
 
@@ -28,6 +28,13 @@ public class TheatreRepoImpl implements TheatreRepo {
 	public ArrayList<TheatreDTO> findByName(String name) {
 		
 		return list;
+	}
+
+	@Override
+	public boolean deleteByIndex(int index) {
+		list.remove(index);
+			
+		return true;
 	}
 	
 	

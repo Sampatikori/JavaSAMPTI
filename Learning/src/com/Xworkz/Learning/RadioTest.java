@@ -2,7 +2,7 @@ package com.Xworkz.Learning;
 
 public class RadioTest {
 	public static void main(String[] args) {
-		Radio sony=new Radio("sony",10000.00);
+		Radio sony=new Radio("sony",10000.00, null);
 		try {
 			
 			Radio copyofsony = (Radio)sony.clone();

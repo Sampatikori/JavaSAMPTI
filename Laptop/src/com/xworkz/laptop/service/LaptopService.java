@@ -10,5 +10,5 @@ public interface LaptopService {
 	public List<LaptopDTO> read();
     public LaptopDTO findByName(String name);
     public LaptopDTO deleteByIndex(int index);
-    public LaptopDTO updateNameByIndex(String name,int index);
+    public boolean updateNameByIndex(String name,int index);
 }

@@ -54,25 +54,23 @@ public class LaptopServiceImpl implements LaptopService {
 			repo.deleteByIndex(index);
 		}
 		return null;
+		
 	}
 
 
 	@Override
-	public LaptopDTO updateNameByIndex(String name, int index) {
-       if(name!=null && index>=0) {
-    	   System.out.println("data is valid");
-    	List<LaptopDTO> dt =repo.read();
-    	for (LaptopDTO laptopDTO : dt) {
-    		if(laptopDTO.getName().equals(name)) {
-    			laptopDTO.setName(name);
-    	 return laptopDTO;
-			
+	public boolean updateNameByIndex(String name, int index) {
+		if(name!=null && index>=0) {
+			repo.updateNameByIndex(name, index);
+			System.out.println("details updated successfully");
+			return true;
 		}
-			
-		}
-       }
+				return false;
+	}
+
+
+	
+
 		
-		return null;
-	}	
 
 }

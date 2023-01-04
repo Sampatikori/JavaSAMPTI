@@ -1,6 +1,7 @@
 package com.Xworkz.Theatre;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.Xworkz.Theatre.service.TheatreService;
@@ -127,8 +128,13 @@ public class TheatreRunner {
 	}
 	
 	service.findByName("Mohini");  
+
+	             TheatreDTO th=service.deleteByIndex(2);
+	             for(TheatreDTO theatredto: read) {
+	            	 System.out.println(theatredto);
+	             }
 	
-		
+	
 	}
 	
 }

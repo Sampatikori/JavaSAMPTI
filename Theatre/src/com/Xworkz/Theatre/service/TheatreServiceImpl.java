@@ -35,12 +35,22 @@ public TheatreDTO findByName(String name) {
 	for (TheatreDTO theatreDTO : dt) 
 		if(theatreDTO.getName().equals(name)) {
 			System.out.println(theatreDTO);
+			return theatreDTO;
 		}
 	}
 
 	return null;
 	
 	
+}
+
+@Override
+public TheatreDTO deleteByIndex(int index) {
+	if(index>=0) {
+		repo.deleteByIndex(index);
+		System.out.println("details is deleted successfully");
+	}
+	return null;
 }
 
 //@Override

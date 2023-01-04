@@ -2,6 +2,7 @@ package com.xworkz.laptop;
 
 import java.security.Provider.Service;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.xworkz.laptop.service.LaptopService;
@@ -61,9 +62,16 @@ public class LaptopRunner {
 			
 		}
   
-
+//           boolean lap = service.updateNameByIndex("Samsung", 3);
+//		  System.out.println(lap);
+		boolean laptodto =service.updateNameByIndex("Samsung", 3);
+          for(LaptopDTO lp:list) {
+        	  System.out.println(lp);
+          }
+			   
+		   }
 		 
-		 
+		   
 	}
 
-}
+

@@ -36,6 +36,10 @@ public class LaptopRepoImpl implements LaptopRepo {
 
 	@Override
 	public List<LaptopDTO> updateNameByIndex(String name, int index) {
+		  LaptopDTO ld=database.get(index);
+		  ld.setName(name);
+		  database.set(index, ld);
+		  database.add(ld);
 		return database;
 		
 		

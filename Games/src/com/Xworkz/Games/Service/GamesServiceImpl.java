@@ -60,4 +60,22 @@ public class GamesServiceImpl implements GamesService {
 		return null;
 	}
 
+	@Override
+	public GamesDTO updateNoOfPlayersByName(int noOfPlayer, String name) {
+		if(name!=null) {
+			repo.updateNoOfPlayersByName(noOfPlayer, name);
+			System.out.println("data has been updated");
+		}
+		return null;
+	}
+
+	@Override
+	public GamesDTO deleteLocationByName(String location, String name) {
+		if(name!=null) {
+			repo.deleteLocationByName(location, name);
+			System.out.println("data has been deleted successfully");
+		}
+		return null;
+	}
+
 }

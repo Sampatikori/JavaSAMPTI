@@ -44,7 +44,19 @@ public class GamesRunner {
 		System.out.println(gd);
 		
 	}
-	
+	  GamesDTO gamedto=service.updateNoOfPlayersByName(12, "Cricket");
+		for(GamesDTO gd:list) {
+			System.out.println(gd);
+		}
+		
+		GamesDTO gd=service.deleteLocationByName("Chennai", "Football");
+		for(GamesDTO gamesdto:list) {
+			System.out.println(gamesdto);
+		}
+		
+		
+		
+		
 		
 		
 	}

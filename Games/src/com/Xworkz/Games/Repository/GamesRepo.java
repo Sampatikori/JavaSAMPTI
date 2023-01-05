@@ -11,4 +11,7 @@ public interface GamesRepo {
   public List<GamesDTO> findByName(String name); 
   public boolean deleteByIndex(int index);
   public List<GamesDTO> updateNameByIndex(String name , int index);
+  public List<GamesDTO> updateNoOfPlayersByName(int noOfPlayer,String name);
+  public List<GamesDTO> deleteLocationByName(String location,String name);
+  
 }

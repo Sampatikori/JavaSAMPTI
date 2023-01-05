@@ -12,4 +12,6 @@ public interface CarRepo {
     public List<CarDTO> updateNameByIndex(String name , int index);
     public List<CarDTO> updateColourByIndex(String colour, int index);
     public List<CarDTO> updateSpeedByBrand(int speed, String brand);
+    public List<CarDTO> updatePriceByType(int price, String type);
+    public List<CarDTO> deleteBrandByColour(String brand,String colour);
 }

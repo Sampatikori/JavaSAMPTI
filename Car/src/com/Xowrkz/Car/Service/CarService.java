@@ -9,7 +9,9 @@ public interface CarService {
   public List<CarDTO> read();
   public CarDTO findByName(String name);
   public CarDTO deleteByIndex(int index);
-  public boolean updateNameByIndex(String name, int index);
-  public boolean updateColourByIndex(String colour, int index);
-  public boolean updateSpeedByBrand(int speed,String brand);
+  public CarDTO updateNameByIndex(String name, int index);
+  public CarDTO updateColourByIndex(String colour, int index);
+  public CarDTO updateSpeedByBrand(int speed,String brand);
+  public CarDTO updatePriceByType(int price, String type);
+  public CarDTO deleteBrandByColour(String brand,String colour);
 }

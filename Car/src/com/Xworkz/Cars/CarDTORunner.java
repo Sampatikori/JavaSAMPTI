@@ -39,15 +39,25 @@ public class CarDTORunner {
 	  service.updateNameByIndex("Mercedes", 2);
 	  for(CarDTO dt:list) {
 	    	 System.out.println(dt);
-	}
-	 service.updateColourByIndex("Black", 2);
-	  for(CarDTO cardto:list) {
+}
+      service.updateColourByIndex("Black", 2);
+      for(CarDTO cardto:list) {
 		  System.out.println(cardto);
 	  }
 	  
-	  CarDTO card=service.updateSpeedByBrand(50, "Benz");
+     CarDTO card=service.updateSpeedByBrand(50, "Benz");
 	  for(CarDTO cd:list) {
 		  System.out.println(cd);
+	  }
+	  
+	 CarDTO cd =service.updatePriceByType(1000000, "Basic");
+	  for(CarDTO dt:list) {
+		  System.out.println(dt);
+	  }
+	  
+	  CarDTO dt=service.deleteBrandByColour("Benz", "Orange");
+	  for(CarDTO cardto:list) {
+		  System.out.println(cardto);
 	  }
 	  
 	  

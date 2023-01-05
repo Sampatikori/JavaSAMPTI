@@ -10,4 +10,6 @@ public interface GamesService {
  public GamesDTO findByName(String name);
  public GamesDTO deleteByIndex(int index);
  public GamesDTO updateNameByIndex(String name, int index);
+ public GamesDTO updateNoOfPlayersByName(int noOfPlayer,String name);
+ public GamesDTO deleteLocationByName(String location,String name);
 }

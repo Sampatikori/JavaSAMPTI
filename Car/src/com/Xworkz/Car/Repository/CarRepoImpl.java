@@ -1,6 +1,7 @@
 package com.Xworkz.Car.Repository;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.Xworkz.Cars.CarDTO;
@@ -45,7 +46,7 @@ public class CarRepoImpl implements CarRepo {
 		CarDTO cd=database.get(index);
 		cd.setBrand(name);
 		database.set(index, cd);
-		database.add(cd);
+//		database.add(cd);
 		
 		return database;
 	}
@@ -57,7 +58,7 @@ public class CarRepoImpl implements CarRepo {
 		System.out.println("data has been fetched from the database");
 		cd.setColour(colour);
 		database.set(index, cd);
-		database.add(cd);
+//		database.add(cd);
 		return database;
 	}
 
@@ -69,8 +70,36 @@ public class CarRepoImpl implements CarRepo {
 			if(cd1.getBrand().equals(brand)) {
 				cd1.setSpeed(speed);
 				database.set(i, cd1);
-				database.add(cd1);
-			return database;		
+				return database;
+			}
+		}
+		return null;
+	}
+
+
+	@Override
+	public List<CarDTO> updatePriceByType(int price, String type) {
+		for(int i=0; i<database.size(); i++) {
+			CarDTO cd2=database.get(i);
+			if(cd2.getType().equals(type)) {
+				cd2.setType(type);
+				cd2.setPrice(price);
+				database.set(i, cd2);
+				return database;
+			}
+		}
+		return null;
+	}
+
+
+	@Override
+	public List<CarDTO> deleteBrandByColour(String brand, String colour) {
+		Iterator<CarDTO> itr=database.iterator();
+		while(itr.hasNext()) {
+			CarDTO dto=itr.next();
+			if(dto.getColour().equals(colour)) {
+				database.remove(dto);
+				return database;
 			}
 		}
 		return null;

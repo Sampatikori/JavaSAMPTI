@@ -54,36 +54,53 @@ public class CarServiceImpl implements CarService {
 	}
 
 	@Override
-	public boolean updateNameByIndex(String name, int index) {
+	public CarDTO updateNameByIndex(String name, int index) {
 		if(name!=null && index>=0) {
 			repo.updateNameByIndex(name, index);
 			System.out.println("details updated successfully");
-			return true;
+		
 		}
-		return false;
+		return null;
 	}
 
 	@Override
-	public boolean updateColourByIndex(String colour, int index) {
-		if(colour!=null && index>=0) {
+	public CarDTO updateColourByIndex(String colour, int index) {
+		if(colour!=null) {
 			repo.updateColourByIndex(colour, index);
 			System.out.println("data is updated successfully");
-			return true;
+	
 		}
-		return false;
+		return null;
 		
 	}
 
 	@Override
-	public boolean updateSpeedByBrand(int speed, String brand) {
-		if(speed>=0 && brand!=null) {
-		     System.out.println("data is updated successfully");
+	public CarDTO updateSpeedByBrand(int speed, String brand) {
+		if(brand!=null) {
 		     repo.updateSpeedByBrand(speed, brand);
-		return true;
+		     System.out.println("speed is updated successfully");
 	}
-		return false;
+		return null;
 
 	
+	}
+
+	@Override
+	public CarDTO updatePriceByType(int price, String type) {
+		if(type!=null) {
+			repo.updatePriceByType(price, type);
+			System.out.println("price is updated successfully");
+		}
+		return null;
+	}
+
+	@Override
+	public CarDTO deleteBrandByColour(String brand, String colour) {
+		if(colour!=null) {
+			repo.deleteBrandByColour(brand, colour);
+			System.out.println("brand has been deleted by colour");
+		}
+		return null;
 	}	
 }
 

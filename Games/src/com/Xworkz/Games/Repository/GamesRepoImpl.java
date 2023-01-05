@@ -1,6 +1,7 @@
 package com.Xworkz.Games.Repository;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import com.Xworkz.Games.GamesDTO;
@@ -40,6 +41,33 @@ public class GamesRepoImpl implements GamesRepo {
 		gd.setGameName(name);
 		gameslist.set(index, gd);
 		return gameslist;
+	}
+
+	@Override
+	public List<GamesDTO> updateNoOfPlayersByName(int noOfPlayer, String name) {
+		  for(int i=0; i<gameslist.size(); i++) {
+			  GamesDTO gd=gameslist.get(i);
+			  if(gd.getGameName().equals(name)) {
+				  gd.setGameName(name);
+				  gd.setNoOfPlayer(noOfPlayer);
+				  gameslist.set(i, gd);
+				  return gameslist;
+			  }
+		  }
+		return null;
+	}
+
+	@Override
+	public List<GamesDTO> deleteLocationByName(String location, String name) {
+		Iterator<GamesDTO> itr=gameslist.iterator();
+		while(itr.hasNext()) {
+			GamesDTO dto=itr.next();
+			if(dto.getGameName().equals(name)) {
+				gameslist.remove(dto);
+			return gameslist;
+			}
+		}
+		return null;
 	}
 
 	

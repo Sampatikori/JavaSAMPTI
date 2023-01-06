@@ -7,7 +7,7 @@ import com.Xworkz.institute.InstituteDTO;
 public interface InstituteRepo {
 	public boolean save(InstituteDTO dto);
     public List<InstituteDTO> read();
-    public List<InstituteDTO> updateLocationByIndex(String location,int index);
-    public List<InstituteDTO> updateCourseByName(String course,String name);
-    public List<InstituteDTO> findByNameAndCourse(String name,String course);
+    public InstituteDTO updateLocationByIndex(String location,int index);
+    public InstituteDTO updateCourseByName(String course,String name);
+    public InstituteDTO findByNameAndCourse(String name,String course);
 }

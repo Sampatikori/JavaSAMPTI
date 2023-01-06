@@ -26,23 +26,23 @@ public class InstituteRepoImpl implements InstituteRepo {
 
 
 	@Override
-	public List<InstituteDTO> updateLocationByIndex(String location, int index) {
+	public InstituteDTO updateLocationByIndex(String location, int index) {
 		InstituteDTO dt=database.get(index);
 		dt.setLocation(location);
 		database.set(index, dt);
-		return database;
+		return dt;
 	}
 
 
 	@Override
-	public List<InstituteDTO> updateCourseByName(String course, String name) {
+	public InstituteDTO updateCourseByName(String course, String name) {
 		for(int i=0; i<database.size(); i++) {
 			InstituteDTO id=database.get(i);
 			if(id.getName().equals(name)) {
 				id.setName(name);
 				id.setCourse(course);
 				database.set(i, id);
-				return database;
+				return id;
 			}
 		}
 		return null;
@@ -50,13 +50,14 @@ public class InstituteRepoImpl implements InstituteRepo {
 
 
 	@Override
-	public List<InstituteDTO> findByNameAndCourse(String name, String course) {
+	public InstituteDTO findByNameAndCourse(String name, String course) {
 		for(InstituteDTO dto : database) {
 			if(dto.getName().equals(name) && dto.getCourse().equals(course)) {
 		}
-		return null;
+		
 	}
-		return database;
+		return null;
+		
 
 
 	

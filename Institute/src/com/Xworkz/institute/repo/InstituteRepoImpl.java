@@ -49,5 +49,16 @@ public class InstituteRepoImpl implements InstituteRepo {
 	}
 
 
+	@Override
+	public List<InstituteDTO> findByNameAndCourse(String name, String course) {
+		for(InstituteDTO dto : database) {
+			if(dto.getName().equals(name) && dto.getCourse().equals(course)) {
+		}
+		return null;
+	}
+		return database;
+
+
 	
+	}
 }

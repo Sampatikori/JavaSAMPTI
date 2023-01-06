@@ -9,5 +9,5 @@ public interface InstituteRepo {
     public List<InstituteDTO> read();
     public List<InstituteDTO> updateLocationByIndex(String location,int index);
     public List<InstituteDTO> updateCourseByName(String course,String name);
-    public 
+    public List<InstituteDTO> findByNameAndCourse(String name,String course);
 }

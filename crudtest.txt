@@ -1,0 +1,7 @@
+create Television DTO of 5 fieldld 1.save (3 fields validation) 2.read
+Fields: 1.brandname  2.size 3.price 4.colour 5.type
+3.findBYNameAndSize
+4.findTypeAndColourByIndex
+5.updateBytypeAndSize
+6.updateSizeByType
+7.deleteByNameAndColour

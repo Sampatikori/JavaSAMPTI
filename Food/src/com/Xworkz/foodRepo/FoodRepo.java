@@ -4,5 +4,6 @@ import com.Xworkz.foodDto.FoodDto;
 
 public interface FoodRepo {
 	public boolean save(FoodDto dto);
+//	public FoodDto read();
 
 }

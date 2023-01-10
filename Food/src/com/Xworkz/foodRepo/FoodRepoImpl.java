@@ -9,11 +9,13 @@ import com.Xworkz.foodDto.FoodDto;
 
 public class FoodRepoImpl implements FoodRepo {
 
+	String username="root";
+	String password="Xworkzodc@123";
+	String host="jdbc:mysql://localhost:3306/sep_08";
+	
 	@Override
 	public boolean save(FoodDto dto) {
-		String username="root";
-		String password="Xworkzodc@123";
-		String host="jdbc:mysql://localhost:3306/sep_08";
+		
 		
        try {
 		Class.forName("com.mysql.cj.jdbc.Driver");
@@ -43,4 +45,6 @@ public class FoodRepoImpl implements FoodRepo {
 	return false;
 
 }
+
+	
 }

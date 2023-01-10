@@ -8,7 +8,7 @@ public class TreeRunner {
 
 	public static void main(String[] args) {
 		TreeRepo repo=new TreeRepoImpl();
-		TreeDto dto=new TreeDto(1,"Beech" ,"Green","300m", "30m");
+		TreeDto dto=new TreeDto(2,"mango" ,"Green","250m", "25m");
 		
 		repo.save(dto);
 

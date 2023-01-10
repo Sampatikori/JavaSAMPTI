@@ -22,11 +22,11 @@ public class TreeRepoImpl implements TreeRepo {
 		
 		PreparedStatement statement=connection.prepareStatement(query);
 		
-		statement.setInt(1, 1);
-		statement.setString(2, "Beech");
-		statement.setString(3, "Green");
-		statement.setString(4, "300m");
-		statement.setString(5, "30m");
+		statement.setInt(1, 3);
+		statement.setString(2, "Mango");
+		statement.setString(3, "yellow");
+		statement.setString(4, "250m");
+		statement.setString(5, "25m");
 		
 		 statement.executeUpdate();
 		 

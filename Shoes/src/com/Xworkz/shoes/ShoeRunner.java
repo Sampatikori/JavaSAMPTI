@@ -22,6 +22,7 @@ public class ShoeRunner {
 
 //		repo.read();
 		System.out.println(repo.findByName("Fila"));
+		System.out.println(repo.findByNameAndId("Bata", 13));
 	}
 
 }

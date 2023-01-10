@@ -113,4 +113,40 @@ public class ShoeRepoImpl implements ShoeRepo {
 	
 		return null;
 	}
+
+	@Override
+	public ShoeDto findByNameAndId(String name, int id) {
+		
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection connection=DriverManager.getConnection(SqlCredentials.URL.getValue(), SqlCredentials.USERNAME.getValue(), SqlCredentials.PASSWORD.getValue());
+			
+			String query="select*from shoe where brandName=? and id=?";
+			PreparedStatement statement=connection.prepareStatement(query);
+			
+			statement.setString(1, name);
+			statement.setInt(2,id);
+			
+			ResultSet set=statement.executeQuery();
+			
+			while(set.next()) {
+			int id1=set.getInt("id");
+			String brandName=set.getString("brandName");
+			int size=set.getInt("size");
+			String colour=set.getString("colour");
+			int price=set.getInt("price");
+			
+			ShoeDto dto=new ShoeDto(id, brandName, size, colour, price);
+			return dto;
+			}
+			statement.close();
+			connection.close();
+          } catch (Exception e) {
+			
+			e.printStackTrace();
+		} 
+		
+	
+		return null;
+	}
 }

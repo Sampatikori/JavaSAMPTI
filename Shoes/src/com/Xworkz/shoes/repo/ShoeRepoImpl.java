@@ -93,15 +93,18 @@ public class ShoeRepoImpl implements ShoeRepo {
 			statement.setString(1, name);
 			
 			ResultSet set=statement.executeQuery();
-			set.next();
+			while(set.next()) {
 			int id=set.getInt("id");
 			String brandName=set.getString("brandName");
 			int size=set.getInt("size");
 			String colour=set.getString("colour");
 			int price=set.getInt("price");
 			
-			System.out.println("id : "+id+ " brandName: "+brandName+ " size: "+size+ " colour: "+colour+ " price : "+price );
-		
+			ShoeDto dto=new ShoeDto(id, brandName, size, colour, price);
+			return dto;
+			}
+			statement.close();
+			connection.close();
           } catch (Exception e) {
 			
 			e.printStackTrace();

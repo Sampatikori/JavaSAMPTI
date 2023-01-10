@@ -21,7 +21,7 @@ public class ShoeRunner {
 //		repo.save(dto4);
 
 //		repo.read();
-		repo.findByName("Nike");
+		System.out.println(repo.findByName("Fila"));
 	}
 
 }

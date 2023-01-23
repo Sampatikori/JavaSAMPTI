@@ -2,7 +2,7 @@ package com.Xworkz.Learning.exception.checkedException;
 
 public class Customer {
 	public static void main(String[] args) {
-		int amount=10000;
+		int amount=50000;
 		ATMMachine atm=new ATMMachine();
 		try {
 			atm.draw(amount);

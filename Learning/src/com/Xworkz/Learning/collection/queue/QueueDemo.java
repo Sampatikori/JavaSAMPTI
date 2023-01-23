@@ -11,10 +11,10 @@ public class QueueDemo {
 		pq.offer('c');
 		pq.offer('D');
 		pq.offer('B');
-		pq.poll();
+	pq.poll();
 		pq.peek();
-		pq.element();
-		pq.remove();
+	pq.element();
+	pq.remove();
 		System.out.println(pq);
 		
 		

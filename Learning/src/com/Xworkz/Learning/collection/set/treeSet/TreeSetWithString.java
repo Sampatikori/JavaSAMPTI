@@ -10,7 +10,7 @@ public class TreeSetWithString {
 		ts.add("sam");
 		ts.add("vish");
 		ts.add("tae");
-		System.err.println(ts);
+		System.out.println(ts);
 	}
 
 }

@@ -5,7 +5,8 @@ import java.util.List;
 import com.Xworkz.chocolate.dto.ChocolateDto;
 
 public interface ChocolateService {
-	public boolean create(ChocolateDto dto);
+	
+	public boolean create(List<ChocolateDto> dto);
 	public List<ChocolateDto> readAll();
 	public ChocolateDto findByColourAndWeight(String colour,String weight);
 	public ChocolateDto findByPriceAndname(int price,String name);

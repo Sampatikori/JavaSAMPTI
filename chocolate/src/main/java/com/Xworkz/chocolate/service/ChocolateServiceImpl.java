@@ -10,9 +10,13 @@ public class ChocolateServiceImpl implements ChocolateService {
 	
 	ChocolateRepo repo=new ChocolateRepoImpl();
 
-	public boolean create(ChocolateDto dto) {
-		if(dto!=null && dto.getName().length()>2) {
-			return repo.create(dto);
+	public boolean create(List<ChocolateDto> dto) {
+		if(dto!=null ) {
+			
+			for (ChocolateDto li : dto) {
+				repo.create(li);
+			}
+			return true;
 		}
 		return false;
 	}
